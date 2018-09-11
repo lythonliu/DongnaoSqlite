@@ -20,7 +20,7 @@ public class MainActivity extends com.lythonliu.LinkAppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        baseDao= BaseDaoFactory.getInstance().getDao(UserDao.class,User.class);
+//        baseDao= BaseDaoFactory.getInstance().getDao(UserDao.class,User.class);
     }
     public void save(View view)
     {

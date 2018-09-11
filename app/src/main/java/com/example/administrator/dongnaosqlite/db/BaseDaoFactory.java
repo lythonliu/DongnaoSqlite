@@ -3,6 +3,8 @@ package com.example.administrator.dongnaosqlite.db;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Environment;
 
+import java.io.File;
+
 /**
  * Created by Administrator on 2017/1/9 0009.
  */
@@ -15,7 +17,8 @@ public class BaseDaoFactory {
     private static  BaseDaoFactory instance=new BaseDaoFactory();
     public BaseDaoFactory()
     {
-        sqliteDatabasePath= Environment.getExternalStorageDirectory().getAbsolutePath()+"/teacher.db";
+        sqliteDatabasePath= Environment.getExternalStorageDirectory().getAbsolutePath()+ File.separator+"teacher.db";
+//        sqliteDatabasePath= "/data/data/com.example.administrator.dongnaosqlite/databases/"+"teacher.db";
         openDatabase();
     }
         public  synchronized  <T extends  BaseDao<M>,M> T
